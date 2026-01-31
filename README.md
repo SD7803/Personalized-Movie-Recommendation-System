@@ -96,18 +96,6 @@ It addresses common problems in recommendation systems, including **sparsity** a
 - Split `genres` into lists for vectorization.  
 - Extract the year from movie titles using regex for additional features.
 
-\`\`\`python
-import re
-
-def extract_year(title):
-    match = re.search(r'\\((\\d{4})\\)', title)
-    if match:
-        return int(match.group(1))
-    return None
-
-movies['year'] = movies['title'].apply(extract_year)
-movies['genres_list'] = movies['genres'].str.split('|')
-\`\`\`
 
 ---
 
@@ -116,12 +104,7 @@ movies['genres_list'] = movies['genres'].str.split('|')
 - Use **Singular Value Decomposition (SVD)** to predict missing ratings.  
 - Handles sparsity by approximating latent factors.
 
-\`\`\`python
-from scipy.sparse.linalg import svds
 
-user_item_matrix = ratings.pivot(index='userId', columns='movieId', values='rating').fillna(0)
-U, sigma, Vt = svds(user_item_matrix.values, k=50)
-\`\`\`
 
 ---
 
@@ -129,16 +112,7 @@ U, sigma, Vt = svds(user_item_matrix.values, k=50)
 - Convert movie genres into **TF-IDF vectors**  
 - Compute cosine similarity between movies to recommend similar content.
 
-\`\`\`python
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import linear_kernel
 
-movies['genres_cleaned'] = movies['genres'].str.replace('|', ' ')
-tfidf = TfidfVectorizer(stop_words='english')
-tfidf_matrix = tfidf.fit_transform(movies['genres_cleaned'])
-
-cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
-\`\`\`
 
 ---
 
@@ -146,9 +120,6 @@ cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
 - Combine **Collaborative Filtering predictions** with **Content-Based similarity scores**  
 - Weighted combination can be used to improve recommendation quality.  
 
-\`\`\`python
-hybrid_score = alpha * cf_score + (1 - alpha) * cb_score
-\`\`\`
 
 ---
 
