@@ -1,8 +1,6 @@
 # Personalized-Movie-Recommendation-System
 
 
-# -*- coding: utf-8 -*-
-# save_readme.py
 
 # Define the README content
 readme_content = """
@@ -211,9 +209,3 @@ jupyter notebook
 2. Ricci, F., Rokach, L., & Shapira, B. (2011). Recommender Systems Handbook. Springer.  
 3. Scikit-learn Documentation: [https://scikit-learn.org/stable/documentation.html](https://scikit-learn.org/stable/documentation.html)  
 """
-
-# Write to README.md
-with open("README.md", "w", encoding="utf-8") as file:
-    file.write(readme_content)
-
-print("README.md has been successfully created!")
