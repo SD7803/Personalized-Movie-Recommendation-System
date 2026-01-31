@@ -58,7 +58,7 @@ It addresses common problems in recommendation systems, including **sparsity** a
 \`\`\`text
           +-------------------+
           |  User Ratings     |
-          +-------------------+
+'''       +-------------------+
                   |
         Collaborative Filtering
                   |
@@ -138,23 +138,6 @@ It addresses common problems in recommendation systems, including **sparsity** a
 | Toy Story (1995)     | 4.75  |
 | Jumanji (1995)       | 4.6   |
 | Heat (1995)          | 4.5   |
-
----
-
-## Installation
-
-1. Clone the repository:
-\`\`\`bash
-git clone https://github.com/yourusername/movie-recommender.git
-\`\`\`
-2. Install dependencies:
-\`\`\`bash
-pip install -r requirements.txt
-\`\`\`
-3. Run the notebook:
-\`\`\`bash
-jupyter notebook
-\`\`\`
 
 ---
 
