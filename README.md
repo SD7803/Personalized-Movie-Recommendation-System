@@ -55,37 +55,43 @@ It addresses common problems in recommendation systems, including **sparsity** a
 ---
 
 ## System Architecture
-\`\`\`text
-          +-------------------+
-          |  User Ratings     |
-'''       +-------------------+
-                  |
-        Collaborative Filtering
-                  |
-          +-------------------+
-          |  Similarity Matrix|
-          +-------------------+
-                  |
-          +-------------------+
-          |   Predictions     |
-          +-------------------+
-                  |
-                  v
-          +-------------------+
-          | Content Features  |
-          | (Genres, TF-IDF) |
-          +-------------------+
-                  |
-                  v
-          +-------------------+
-          |  Hybrid Model     |
-          +-------------------+
-                  |
-                  v
-          +-------------------+
-          | Recommendations   |
-          +-------------------+
-\`\`\`
+
++-------------------+
+| User Ratings |
++-------------------+
+|
+v
++-------------------+
+| Collaborative |
+| Filtering |
++-------------------+
+|
+v
++-------------------+
+| Similarity Matrix |
++-------------------+
+|
+v
++-------------------+
+| Predictions |
++-------------------+
+|
+v
++-------------------+
+| Content Features |
+| (Genres, TF-IDF) |
++-------------------+
+|
+v
++-------------------+
+| Hybrid Model |
++-------------------+
+|
+v
++-------------------+
+| Recommendations |
++-------------------+
+
 
 ---
 
