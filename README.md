@@ -2,8 +2,6 @@
 
 
 
-# Define the README content
-readme_content = """
 # Movie Recommender System
 
 A **hybrid movie recommender system** built using Python that combines **Collaborative Filtering** and **Content-Based Filtering** to provide personalized movie recommendations. This project demonstrates practical applications of data science techniques, including data preprocessing, matrix factorization, TF-IDF vectorization, and hybrid recommendation strategies.
